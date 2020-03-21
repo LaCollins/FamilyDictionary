@@ -14,7 +14,10 @@ namespace FamilyDictionary
             myFamily.Add("father", new Dictionary<string, string>() { { "name", "Clifford" }, { "age", "71" } });
             myFamily.Add("mother", new Dictionary<string, string>() { { "name", "Kimberly" }, { "age", "59" } });
 
-
+            foreach (var familyMember in myFamily)
+            {
+                Console.WriteLine($"{familyMember.Value["name"]} is my {familyMember.Key} and is {familyMember.Value["age"]} years old.");
+            }
         }
     }
 }
